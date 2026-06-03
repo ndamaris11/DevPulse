@@ -4,6 +4,15 @@ Welcome to **DevPulse**, a full-stack MERN application featuring a responsive Re
 
 ---
 
+## ✨ Key Features
+
+* **User Authentication:** Secure user signup and login functionality using JSON Web Tokens (JWT) and password hashing (bcryptjs).
+* **Project Dashboard:** A clean, responsive dashboard interface where users can view, track, and manage their development projects.
+* **Full-Stack Data Flow:** Seamless API routing connecting a React frontend to a Node.js/Express backend server.
+* **Database Management:** Scalable data modeling for users and projects integrated directly with MongoDB.
+
+---
+
 ## 📁 Project Structure
 
 This repository contains both the frontend and backend of the application:
@@ -23,12 +32,13 @@ This repository contains both the frontend and backend of the application:
 
 ## 🚀 How to Run the Project Locally
 
-### 1. Clone the Repository
+1. Clone the Repository
 ```bash
 git clone [https://github.com/ndamaris11/DevPulse.git](https://github.com/ndamaris11/DevPulse.git)
 cd DevPulse
 
 2. Setup the Backend Server
+
 Bash
 cd server
 npm install
