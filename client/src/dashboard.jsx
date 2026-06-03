@@ -1,3 +1,4 @@
+import AIAnalysisModule from './AIAnalysisModule';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
@@ -27,16 +28,16 @@ const Dashboard = ({ user, setUser }) => {
 
     // 2. Fetch News
     const fetchNews = async () => {
-    try {
-        const token = localStorage.getItem('token'); // Get the token
-        const res = await axios.get('http://localhost:5000/api/news', {
-            headers: { 'x-auth-token': token } // Send the token
-        });
-        setNews(res.data);
-    } catch (err) {
-        console.error("Error fetching news");
-    }
-};
+        try {
+            const token = localStorage.getItem('token'); // Get the token
+            const res = await axios.get('http://localhost:5000/api/news', {
+                headers: { 'x-auth-token': token } // Send the token
+            });
+            setNews(res.data);
+        } catch (err) {
+            console.error("Error fetching news");
+        }
+    };
 
     // 3. Effect Hook (Runs on mount)
     useEffect(() => {
@@ -106,6 +107,14 @@ const Dashboard = ({ user, setUser }) => {
                                         <span style={{...styles.badge, backgroundColor: proj.status === 'Completed' ? '#d4edda' : '#fff3cd'}}>
                                             {proj.status}
                                         </span>
+
+                                        {/* 🚀 AI ENGINE HOOK INJECTED HERE */}
+                                        <AIAnalysisModule 
+                                            project={proj} 
+                                            onUpdate={(updatedProj) => {
+                                                setProjects(projects.map(p => p._id === updatedProj._id ? updatedProj : p));
+                                            }} 
+                                        />
                                     </div>
                                 ))
                             )}

@@ -21,6 +21,17 @@ const ProjectSchema = new mongoose.Schema({
     date: {
         type: Date,
         default: Date.now
+    },
+    // 🚀 NEW: This holds the structured AI analysis payload for your interview demo!
+    aiAnalysis: {
+        score: Number,
+        marketTrends: String,
+        targetAudience: String,
+        roadblocks: String,
+        analyzedAt: { 
+            type: Date, 
+            default: Date.now 
+        }
     }
 });
 
