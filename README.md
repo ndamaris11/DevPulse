@@ -30,26 +30,17 @@ This repository contains both the frontend and backend of the application:
 
 ---
 
-## 🚀 How to Run the Project Locally
+## 🚀 Quick Start
 
-1. Clone the Repository
+> 💡 **Note:** Ensure you create a `.env` file in the `server` directory with your `MONGO_URI` and `JWT_SECRET` variables before starting.
+
 ```bash
+# Clone the repository
 git clone [https://github.com/ndamaris11/DevPulse.git](https://github.com/ndamaris11/DevPulse.git)
 cd DevPulse
 
-2. Setup the Backend Server
+# Install all dependencies (frontend & backend)
+npm run setup
 
-Bash
-cd server
-npm install
-npm start
-(Make sure to create a .env file in the server root folder with your MONGO_URI and JWT_SECRET variables).
-
-3. Setup the Frontend Client
-Open a new terminal window, then run:
-
-Bash
-cd client
-npm install
+# Start both servers simultaneously
 npm run dev
-
