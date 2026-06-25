@@ -1,0 +1,25 @@
+{
+  "name": "devpulse",
+  "version": "1.0.0",
+  "description": "Welcome to **DevPulse**, a full-stack MERN application featuring a responsive React frontend and a robust Node.js/Express backend integrated with MongoDB.",
+  "main": "index.js",
+  "scripts": {
+    "setup": "concurrently \"npm install --prefix server\" \"npm install --prefix client\"",
+    "dev": "concurrently \"npm start --prefix server\" \"npm run dev --prefix client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ndamaris11/DevPulse.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/ndamaris11/DevPulse/issues"
+  },
+  "homepage": "https://github.com/ndamaris11/DevPulse#readme",
+  "devDependencies": {
+    "concurrently": "^10.0.3"
+  }
+}
